@@ -55,7 +55,7 @@ const statusCode = (res, status, name) => {
       chrome.storage.sync.set({ mode_type: 'commit' }, () => {
         $('#error').hide();
         $('#success').html(
-          `Successfully created <a target="blank" href="${res.html_url}">${name}</a>. Start <a href="http://leetcode.com">LeetCoding</a>!`,
+          `Successfully created <a target="blank" href="${res.html_url}">${name}</a>. Start <a href="https://codeforces.com/">Coding</a>!`,
         );
         $('#success').show();
         $('#unlink').show();
@@ -80,7 +80,7 @@ const createRepo = (token, name) => {
     private: true,
     auto_init: true,
     description:
-      'Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub).',
+      'Collection of CodeForces questions to ace the coding interview! - Created using [CodeForcesHub](https://github.com/mahbubcseju/CodeForcesHub).',
   };
   data = JSON.stringify(data);
 
@@ -104,7 +104,7 @@ const linkStatusCode = (status, name) => {
     case 301:
       $('#success').hide();
       $('#error').html(
-        `Error linking <a target="blank" href="${`https://github.com/${name}`}">${name}</a> to LeetHub. <br> This repository has been moved permenantly. Try creating a new one.`,
+        `Error linking <a target="blank" href="${`https://github.com/${name}`}">${name}</a> to CodeForcesub. <br> This repository has been moved permenantly. Try creating a new one.`,
       );
       $('#error').show();
       break;
@@ -112,7 +112,7 @@ const linkStatusCode = (status, name) => {
     case 403:
       $('#success').hide();
       $('#error').html(
-        `Error linking <a target="blank" href="${`https://github.com/${name}`}">${name}</a> to LeetHub. <br> Forbidden action. Please make sure you have the right access to this repository.`,
+        `Error linking <a target="blank" href="${`https://github.com/${name}`}">${name}</a> to CodeForcesHub. <br> Forbidden action. Please make sure you have the right access to this repository.`,
       );
       $('#error').show();
       break;
@@ -120,7 +120,7 @@ const linkStatusCode = (status, name) => {
     case 404:
       $('#success').hide();
       $('#error').html(
-        `Error linking <a target="blank" href="${`https://github.com/${name}`}">${name}</a> to LeetHub. <br> Resource not found. Make sure you enter the right repository name.`,
+        `Error linking <a target="blank" href="${`https://github.com/${name}`}">${name}</a> to CodeForces. <br> Resource not found. Make sure you enter the right repository name.`,
       );
       $('#error').show();
       break;
@@ -153,7 +153,7 @@ const linkRepo = (token, name) => {
           // unable to gain access to repo in commit mode. Must switch to hook mode.
           /* Set mode type to hook */
           chrome.storage.sync.set({ mode_type: 'hook' }, () => {
-            console.log(`Error linking ${name} to LeetHub`);
+            console.log(`Error linking ${name} to CodeForcesHub`);
           });
           /* Set Repo Hook to NONE */
           chrome.storage.sync.set({ codeforceshub_hook: null }, () => {
@@ -173,7 +173,7 @@ const linkRepo = (token, name) => {
             () => {
               $('#error').hide();
               $('#success').html(
-                `Successfully linked <a target="blank" href="${res.html_url}">${name}</a> to LeetHub. Start <a href="http://leetcode.com">LeetCoding</a> now!`,
+                `Successfully linked <a target="blank" href="${res.html_url}">${name}</a> to CodeForcesHub. Start <a href="https://codeforces.com/">Coding</a> now!`,
               );
               $('#success').show();
               $('#unlink').show();
@@ -266,7 +266,7 @@ $('#hook_button').on('click', () => {
       if (token === null || token === undefined) {
         /* Not authorized yet. */
         $('#error').text(
-          'Authorization error - Grant LeetHub access to your GitHub account to continue (launch extension to proceed)',
+          'Authorization error - Grant CodeForcesHub access to your GitHub account to continue (launch extension to proceed)',
         );
         $('#error').show();
         $('#success').hide();
@@ -278,7 +278,7 @@ $('#hook_button').on('click', () => {
           if (!username) {
             /* Improper authorization. */
             $('#error').text(
-              'Improper Authorization error - Grant LeetHub access to your GitHub account to continue (launch extension to proceed)',
+              'Improper Authorization error - Grant CodeForcesHub access to your GitHub account to continue (launch extension to proceed)',
             );
             $('#error').show();
             $('#success').hide();

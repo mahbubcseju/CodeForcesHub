@@ -2,9 +2,9 @@
     "manifest_version" : 2,
     "name" : "CodeForcesHub",
     "description" : "Automatically integrate your code with Codeforces and GitHub",
-    "homepage_url": "",
+    "homepage_url": "https://github.com/mahbubcseju/CodeForcesHub",
     "version" : "0.1.1",
-    "author" : "Qasim Wani",
+    "author" : "MD Mahbubur Rahman",
     "browser_action": {
         "default_icon": "assets/thumbnail.png",
         "default_popup": "popup.html"
@@ -28,7 +28,7 @@
           "matches": [
             "https://codeforces.com/*", "https://github.com/*"
           ],
-          "js": ["scripts/leetcode.js", "scripts/authorize.js"],
+          "js": ["scripts/codeforces.js", "scripts/authorize.js"],
           "run_at": "document_start"
         }
       ],
