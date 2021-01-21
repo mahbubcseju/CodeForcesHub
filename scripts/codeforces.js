@@ -183,7 +183,7 @@ const loader = setInterval(() => {
           var solutionStats =  getStats(lastSubmission);
           var verdict = getVerdict(columns[5]);
           var iswaiting = columns[5].getAttribute('waiting');
-          if (iswaiting == false)  {
+          if (iswaiting === "false")  {
             clearTimeout(loader);
           }
           if (verdict.includes('Accepted')) {

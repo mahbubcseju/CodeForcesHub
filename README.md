@@ -1,4 +1,10 @@
-# An Extension to Upload CF Submission to Github
+<h1 align="center">
+  <a href="https://standardjs.com"><img src="assets/thumbnail.png" alt="LeetHub - Automatically sync your code to GitHub." width="400"></a>
+  <br>
+  LeetHub - Automatically sync your code to GitHub.
+  <br>
+  <br>
+</h1>
 
 An Extension for Automatic Uploading CF solutions in github!
 
