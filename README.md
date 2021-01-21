@@ -13,7 +13,7 @@ An Extension for Automatic Uploading CF solutions in github!
 <p>As I didn't published using chrome web store, you can use it as like as the following way.:</p>
 <ol>
   <li>Clone the full repository</li>
-  <li>Go to the chrome extension manager : [click](chrome://extensions/)</li>
+  <li>Go to the chrome extension manager : chrome://extensions/</li>
   <li>Turn on the developer mode. (you will find the option on the right top corner)</li>
   <li>Now load the full code repository by clikcing on the 'load unpacked option' from the left top corner</li>
 </ol>
