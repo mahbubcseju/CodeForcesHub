@@ -156,8 +156,11 @@ function getProblemName(element) {
 }
 
 function getStats(elements) {
-  console.log(elements.innerText)
   return elements.innerText;
+}
+
+function getVerdict(element) {
+  return element.innerText;
 }
 
 const loader = setInterval(() => {
@@ -173,18 +176,24 @@ const loader = setInterval(() => {
       if(onlyPractices) {
         var tableRows = mySubmissionElement.getElementsByTagName('tr');
         if (tableRows.length > 1) {
-          clearTimeout(loader);
           var lastSubmission = tableRows[1];
           var columns = lastSubmission.getElementsByTagName('td');
           var language = getLanguage(columns[4]);
           var problemName = getProblemName(columns[3]);
           var solutionStats =  getStats(lastSubmission);
-          UploadCode(
-            columns[0],
-            problemName,
-            language,
-            solutionStats,
-          )
+          var verdict = getVerdict(columns[5]);
+          var iswaiting = columns[5].getAttribute('waiting');
+          if (iswaiting == false)  {
+            clearTimeout(loader);
+          }
+          if (verdict.includes('Accepted')) {
+            UploadCode(
+              columns[0],
+              problemName,
+              language,
+              solutionStats,
+            )
+          }
         }
       }
     }
