@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://standardjs.com"><img src="assets/thumbnail.png" alt="LeetHub - Automatically sync your code to GitHub." width="400"></a>
+  <a href="https://standardjs.com"><img src="assets/thumbnail.png" alt="CodeForcesHub - Automatically sync your code to GitHub." width="400"></a>
   <br>
   LeetHub - Automatically sync your code to GitHub.
   <br>
